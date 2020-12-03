@@ -1,0 +1,36 @@
+﻿@model Amazing.Web.Areas.Admin.Models.RoleViewModels.CreateOrUpdateRoleViewModel
+@{
+    ViewData["Title"] = "创建角色";
+}
+<div class="row">
+    <div class="col-xl">
+        <div class="card ">
+            <div class="card-header">
+                <h3 class="card-title">@ViewData["Title"]</h3>
+            </div>
+            <div class="card-body">
+
+                <p>创建一个新的角色/用户组信息。 </p>
+                <form>
+                    <div class="form-group">
+                        <label>用户名</label>
+                        <input type="text" class="form-control" asp-for="Name">
+                        <small class="form-text text-muted">名称必须保证唯一，只能包含大小写英文字母或数字。</small>
+                    </div>
+                    <div class="form-group">
+                        <label>显示名称</label>
+                        <input type="text" class="form-control" asp-for="DisplayName">
+                        <small class="form-text text-muted">显示名称为了更容易识别，可以使用该角色权限相关职位、职能代替。</small>
+                    </div>
+                    <div class="form-group">
+                        <label>描述</label>
+                        <textarea type="text" class="form-control" asp-for="Description"></textarea>
+                        <small class="form-text text-muted">详细的描述信息，是为了更彻底的了解角色。</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

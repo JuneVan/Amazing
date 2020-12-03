@@ -1,15 +1,14 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Amazing.Authorization.Roles
 {
-    public interface IRoleStore
+    public interface IRoleStore :
+         IQueryableRoleStore<Role>,
+        IRoleClaimStore<Role>
     {
-        Task<AmazingResult> CreateAsync(Role role, CancellationToken cancellaction);
-        Task<AmazingResult> UpdateAsync(Role role, CancellationToken cancellaction);
-        Task<AmazingResult> DeleteAsync(Role role, CancellationToken cancellaction);
-        Task<Role> FindByIdAsync(Guid roleId, CancellationToken cancellaction);
-        Task<Role> FindByNameAsync(string normalizedName, CancellationToken cancellaction);
+        Task<List<string>> GetPermissionClaimsAsync(Role role, CancellationToken cancellationToken = default);
     }
 }

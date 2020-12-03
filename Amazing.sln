@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazing", "src\Amazing\Amaz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazing.EntityFramework", "src\Amazing.EntityFramework\Amazing.EntityFramework.csproj", "{E941C2C6-E0D3-4229-8F53-B92FC86D56F0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazing.AspNetCore.Mvc", "src\Amazing.AspNetCore.Mvc\Amazing.AspNetCore.Mvc.csproj", "{179BE680-A615-49F7-A3BA-702A5E7412CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{E941C2C6-E0D3-4229-8F53-B92FC86D56F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E941C2C6-E0D3-4229-8F53-B92FC86D56F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E941C2C6-E0D3-4229-8F53-B92FC86D56F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{179BE680-A615-49F7-A3BA-702A5E7412CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{179BE680-A615-49F7-A3BA-702A5E7412CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{179BE680-A615-49F7-A3BA-702A5E7412CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{179BE680-A615-49F7-A3BA-702A5E7412CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

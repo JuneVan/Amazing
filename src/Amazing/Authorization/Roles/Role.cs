@@ -1,24 +1,15 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 
 namespace Amazing.Authorization.Roles
 {
-    public class Role
+    public class Role : IdentityRole<Guid>
     {
         public Role() { }
-        public Role(string roleName) : this()
+        public Role(string roleName) : base(roleName)
         {
-            Name = roleName;
-        }
-        public virtual Guid Id { get; set; }
-        /// <summary>
-        /// 角色名称
-        /// </summary>
-        public virtual string Name { get; set; }
-        /// <summary>
-        /// 标准化的角色名称
-        /// </summary>
-        public virtual string NormalizedName { get; set; }
+        } 
         /// <summary>
         /// 显示名称
         /// </summary>
@@ -35,10 +26,6 @@ namespace Amazing.Authorization.Roles
         /// 受保护状态（不可删除）
         /// </summary>
         public virtual bool Protected { get; set; }
-        public virtual string ConcurrencyStamp { get; set; } = Guid.NewGuid().ToString();
-        public override string ToString() => Name;
-
-        public virtual ICollection<RolePermission> Permissions { get; set; }
 
         public class Constants
         {

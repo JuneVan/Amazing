@@ -13,7 +13,7 @@ namespace Amazing.EntityFramework.Configurations
             builder.Property(p => p.Name).HasMaxLength(Role.Constants.MaxNameLength);
             builder.Property(p => p.NormalizedName).HasMaxLength(Role.Constants.MaxNormalizedNameLength);
             builder.Property(p => p.DisplayName).HasMaxLength(Role.Constants.MaxDisplayNameLength);
-            builder.Property(p => p.Description).HasMaxLength(Role.Constants.MaxDescriptionLength);
+            builder.Property(p => p.Description).HasMaxLength(Role.Constants.MaxDescriptionLength); 
         }
     }
 }
